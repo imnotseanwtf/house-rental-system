@@ -3,6 +3,7 @@
 use App\Http\Controllers\HouseController;
 use App\Http\Controllers\HouseTypeController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TenantController;
 use App\Http\Controllers\TenantPaymentsController;
 use Illuminate\Support\Facades\Route;
@@ -25,7 +26,15 @@ Route::middleware('auth')->group(function () {
         'payment' => PaymentController::class,
     ]);
 
+    // TENANT PAYMENTS
     Route::get('tenant-payments/{tenant}', [TenantPaymentsController::class, 'index'])->name('tenantPayments.index');
+
+    // REPORT
+    Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
+
+    // MONTHLY REPORT
+    Route::get('report-payments', [ReportController::class, 'monthlyPaymentsReport'])->name('monthlyPayments.index');
+    Route::get('report-balances', [ReportController::class, 'monthlyBalancesReport'])->name('monthlyBalances.index');
 
     Route::view('about', 'about')->name('about');
 
