@@ -20,7 +20,7 @@ class TenantController extends Controller
      */
     public function index(TenantDataTable $tenantDataTable): JsonResponse | View
     {
-        $houses = House::all();
+        $houses = House::doesntHave('tenant')->get();
 
         return $tenantDataTable->render('tenant.index', compact('houses'));
     }

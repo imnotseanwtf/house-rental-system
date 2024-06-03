@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Tenant;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class TenantSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class TenantSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Tenant::factory(3)->create();
     }
 }

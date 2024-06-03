@@ -89,16 +89,16 @@
                      </div>
                      
                      <div class="form-group">
-                        <label for="date">{{ __('Date') }}</label>
+                        <label>{{ __('House Number') }}</label>
                         <div class="input-group">
-                            <input name="date" type="text" id="view_date" class="form-control" placeholder="{{ __('Date') }}" value="{{ old('date') }}" readonly>
+                            <input name="house_number" type="text" id="view_house_number" class="form-control" placeholder="{{ __('House Number') }}" value="{{ old('house_number') }}" readonly>
                         </div>
                      </div>
                      
                      <div class="form-group">
-                        <label for="house_id">{{ __('House ID') }}</label>
+                        <label>{{ __('Monthly Rate') }}</label>
                         <div class="input-group">
-                            <input name="house_id" type="text" id="view_house_id" class="form-control" placeholder="{{ __('House ID') }}" value="{{ old('house_id') }}" readonly>
+                            <input name="price" type="text" id="view_price" class="form-control" placeholder="{{ __('Monthly Rate') }}" value="{{ old('price') }}" readonly>
                         </div>
                      </div>
 

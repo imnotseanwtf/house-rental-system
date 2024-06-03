@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\HouseType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class HouseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'house_number' => fake()->randomNumber(3),
+            'house_type_id' => HouseType::inRandomOrder()->value('id'),
+            'description' => fake()->sentence(),
+            'price' => fake()->randomNumber(3),
         ];
     }
 }

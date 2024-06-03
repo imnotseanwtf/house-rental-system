@@ -17,7 +17,7 @@ class HouseTypeFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'category' => fake()->name()
         ];
     }
 }

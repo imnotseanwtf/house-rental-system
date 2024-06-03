@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\House;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class HouseSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class HouseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        House::factory(10)->create();
     }
 }
